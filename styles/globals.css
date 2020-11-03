@@ -4,6 +4,20 @@ body,
   height: 100%;
 }
 
+html {
+  font-size: 100%;
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.75;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
 * {
   box-sizing: border-box;
 }
