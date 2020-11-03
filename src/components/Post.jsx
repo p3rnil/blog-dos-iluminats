@@ -4,35 +4,17 @@ import { jsx } from 'theme-ui'
 
 const Post = ({ data }) => {
   return (
-    <article>
+    <article sx={{ variant: 'containers.post' }}>
       <header>
-        <h3 sx={{ variant: 'typography.h3' }}>
-          <a sx={{ variant: 'tags.a' }} href="/">
-            {data.title}
-          </a>
+        <h3 sx={{ variant: 'containers.post.title' }}>
+          <a href="/">{data.title}</a>
         </h3>
-        <div
-          sx={{
-            width: '100%',
-            maxHeight: '140px',
-            borderRadius: '3px',
-            overflow: 'hidden',
-          }}
-        >
-          <img
-            width="100%"
-            sx={{
-              margin: '-25.5% 0px 0px 0px;',
-              width: '100%',
-              height: 'auto',
-              borderRadius: '3px',
-            }}
-            src={data.img}
-          ></img>
+        <div sx={{ variant: 'containers.post.cropImage' }}>
+          <img sx={{ variant: 'containers.post.image' }} src={data.img}></img>
         </div>
-        <small sx={{ variant: 'tags.small' }}>{data.small}</small>
+        <small sx={{ variant: 'containers.post.info' }}>{data.small}</small>
       </header>
-      <p sx={{ variant: 'tags.p' }}>{data.text}</p>
+      <p sx={{ variant: 'containers.post.text' }}>{data.text}</p>
     </article>
   )
 }

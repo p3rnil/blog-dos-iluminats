@@ -27,7 +27,7 @@ const Index = ({ posts }) => {
           sx={{ width: '100%', display: 'flex', justifyContent: 'flex-start' }}
         >
           <h1 sx={{ variant: 'typography.h1' }}>
-            <a sx={{ variant: 'tags.a' }} href="/">
+            <a sx={{ color: 'inherit', textDecoration: 'none' }} href="/">
               Dos il·luminats
             </a>
           </h1>
@@ -53,8 +53,11 @@ const Index = ({ posts }) => {
               my: '10px',
             }}
           >
-            <a sx={{ variant: 'tags.a' }} href="https://github.com/p3rnil">
-              Made with ☕ by p3rnil
+            <a
+              sx={{ color: 'inherit', textDecoration: 'none' }}
+              href="https://github.com/p3rnil"
+            >
+              Made with 🌶️ by p3rnil
             </a>
           </div>
         </footer>
