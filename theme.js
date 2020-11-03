@@ -32,25 +32,25 @@ const theme = {
   ...typography,
   containers: {
     post: {
-      title: {
+      h3: {
         ...typography.h3,
       },
-      cropImage: {
+      div: {
         width: '100%',
         maxHeight: '140px',
         borderRadius: '3px',
         overflow: 'hidden',
       },
-      image: {
+      img: {
         margin: '-25.5% 0px 0px 0px;',
         width: '100%',
         height: 'auto',
         borderRadius: '3px',
       },
-      info: {
+      small: {
         fontSize: '80%',
       },
-      text: {
+      p: {
         marginLeft: '0',
         marginRight: '0',
         marginTop: '0',

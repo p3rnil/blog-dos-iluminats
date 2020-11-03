@@ -7,6 +7,7 @@ import Post from '../src/components/Post'
 const Index = ({ posts }) => {
   return (
     <div
+      key="1"
       sx={{
         maxWidth: '42rem',
         padding: '2.625rem 1.3125rem',
@@ -22,7 +23,10 @@ const Index = ({ posts }) => {
           href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/comet_2604.png"
         />
       </Head>
-      <div sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+      <div
+        key="1"
+        sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}
+      >
         <header
           sx={{ width: '100%', display: 'flex', justifyContent: 'flex-start' }}
         >
