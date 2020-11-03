@@ -16,13 +16,16 @@ const Index = ({ posts }) => {
     >
       <Head>
         <title>Dos il·luminats</title>
+        <meta property="og:title" content="Dos il·luminats" key="title" />
         <link
           rel="icon"
           href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/comet_2604.png"
         />
       </Head>
       <div sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-        <header sx={{ width: '100%' }}>
+        <header
+          sx={{ width: '100%', display: 'flex', justifyContent: 'flex-start' }}
+        >
           <h1 sx={{ variant: 'typography.h1' }}>
             <a sx={{ variant: 'tags.a' }} href="/">
               Dos il·luminats
