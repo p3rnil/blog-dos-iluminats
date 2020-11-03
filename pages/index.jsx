@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import Head from 'next/head'
+import Post from '../src/components/Post'
 
 const Index = () => {
   return (
@@ -22,17 +23,20 @@ const Index = () => {
       </Head>
       <div sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
         <header sx={{ width: '100%' }}>
-          <h1 sx={{ variant: 'typography.title' }}>Header</h1>
+          <h1 sx={{ variant: 'typography.h1' }}>
+            <a sx={{ variant: 'tags.a' }} href="/">
+              Dos il·luminats
+            </a>
+          </h1>
         </header>
-        <aside></aside>
+        <aside>
+          <div>
+            {/* <img></img> */}
+            <p>A personal blog by name1 and name2</p>
+          </div>
+        </aside>
         <main sx={{ width: '100%', flex: '1 0 auto' }}>
-          <article sx={{ variant: 'containers.page' }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris
-            ex, facilisis eget purus nec, laoreet pulvinar lorem. Vestibulum
-            enim ligula, mollis at iaculis nec, interdum eu magna. Donec eget
-            nisi et erat varius blandit. Etiam ut nulla vel enim porttitor
-            viverra vel sit amet mauris.
-          </article>
+          <Post />
         </main>
         <footer sx={{ width: '100%', flexShrink: '0' }}>
           <div
@@ -44,7 +48,9 @@ const Index = () => {
               my: '10px',
             }}
           >
-            <a href="https://github.com/p3rnil">Made with ☕ by p3rnil</a>
+            <a sx={{ variant: 'tags.a' }} href="https://github.com/p3rnil">
+              Made with ☕ by p3rnil
+            </a>
           </div>
         </footer>
       </div>
