@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui'
 import Head from 'next/head'
 import Post from '../src/components/Post'
 
-const Index = () => {
+const Index = ({ posts }) => {
   return (
     <div
       sx={{
@@ -36,7 +36,9 @@ const Index = () => {
           </div>
         </aside>
         <main sx={{ width: '100%', flex: '1 0 auto' }}>
-          <Post />
+          {posts.map((post) => (
+            <Post key={post.id} data={post} />
+          ))}
         </main>
         <footer sx={{ width: '100%', flexShrink: '0' }}>
           <div
@@ -56,6 +58,27 @@ const Index = () => {
       </div>
     </div>
   )
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      posts: [
+        {
+          id: '1',
+          title: 'Lorem Ipsum 1',
+          small: 'July 13, 2020 • ☕️ 1 min read',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        },
+        {
+          id: '2',
+          title: 'Lorem Ipsum 2',
+          small: 'July 13, 2020 • ☕️ 1 min read',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        },
+      ],
+    },
+  }
 }
 
 export default Index
