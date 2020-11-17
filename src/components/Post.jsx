@@ -10,7 +10,7 @@ const Post = ({ data }) => {
           <a href="/">{data.title}</a>
         </h3>
         <div>
-          <img src={data.img}></img>
+          <img src={data.img} />
         </div>
         <small>{data.small}</small>
       </header>

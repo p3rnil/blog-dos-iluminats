@@ -3,6 +3,7 @@
 import { jsx } from 'theme-ui'
 import Head from 'next/head'
 import Post from '../src/components/Post'
+import Author from '../src/components/Author'
 
 const Index = ({ posts }) => {
   return (
@@ -36,11 +37,9 @@ const Index = ({ posts }) => {
             </a>
           </h1>
         </header>
-        <aside>
-          <div>
-            {/* <img></img> */}
-            <p>A personal blog by name1 and name2</p>
-          </div>
+        <aside sx={{ display: [null, 'flex', 'flex', 'flex'] }}>
+          <Author style={{ marginBottom: ['3rem', 0, null, null] }} />
+          <Author />
         </aside>
         <main sx={{ width: '100%', flex: '1 0 auto' }}>
           {posts.map((post) => (

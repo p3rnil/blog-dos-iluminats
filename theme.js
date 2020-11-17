@@ -30,6 +30,37 @@ const typography = {
 const theme = {
   ...swiss,
   ...typography,
+  webTitle: {
+    ...typography.h1,
+    fontSize: '1.98818rem',
+    lineHeight: '2.625rem',
+    fontWeight: '900',
+  },
+  author: {
+    img: {
+      marginRight: '0.875rem',
+      marginBottom: '0',
+      width: '3.5rem',
+      height: '3.5rem',
+      borderRadius: ' 50%',
+    },
+    ul: {
+      listStyleType: 'none',
+      margin: '0px',
+      padding: '0px',
+    },
+    li: {
+      display: 'inline-block',
+      margin: ' 0px 10px',
+      fontSize: '1.6em',
+      opacity: '0.7',
+    },
+    a: {
+      color: 'rgb(0, 0, 0)',
+      textDecoration: 'none',
+    },
+    p: { margin: '0' },
+  },
   containers: {
     post: {
       h3: {
