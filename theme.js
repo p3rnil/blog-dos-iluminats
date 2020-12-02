@@ -32,8 +32,7 @@ const colors = {
   modes: {
     dark: {
       text: '#fff',
-      background: '#000',
-      primary: '#0cf',
+      background: '#282c35',
     },
   },
 }

@@ -4,6 +4,10 @@ body,
   height: 100%;
 }
 
+body {
+  transition: color 0.2s ease-out, background 0.2s ease-out;
+}
+
 html {
   font-size: 100%;
   font-style: normal;
