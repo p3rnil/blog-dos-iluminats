@@ -33,20 +33,28 @@ const Index = ({ posts }) => {
           sx={{
             width: '100%',
             display: 'flex',
-            justifyContent: 'flex-start',
+            justifyContent: 'space-between',
+            alignItems: 'center',
           }}
         >
           <h1 sx={{ variant: 'typography.h1' }}>
-            <a sx={{ color: 'inherit', textDecoration: 'none' }} href="/">
+            <a
+              sx={{
+                color: 'inherit',
+                textDecoration: 'none',
+                textTransform: 'uppercase',
+              }}
+              href="/"
+            >
               Dos il·luminats
             </a>
           </h1>
+          <ToggleModeTheme />
         </header>
         <aside sx={{ display: [null, 'flex', 'flex', 'flex'] }}>
           <Author style={{ marginBottom: ['3rem', 0, null, null] }} />
           <Author />
         </aside>
-        <ToggleModeTheme />
         <main sx={{ width: '100%', flex: '1 0 auto' }}>
           {posts.map((post) => (
             <Post key={post.id} data={post} />

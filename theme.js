@@ -68,8 +68,9 @@ const theme = {
       opacity: '0.7',
     },
     a: {
-      color: 'rgb(0, 0, 0)',
+      color: 'primary',
       textDecoration: 'none',
+      cursor: 'pointer',
     },
     p: { margin: '0' },
   },
