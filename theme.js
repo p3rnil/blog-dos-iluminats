@@ -27,9 +27,22 @@ const typography = {
   },
 }
 
+const colors = {
+  ...swiss.colors,
+  modes: {
+    dark: {
+      text: '#fff',
+      background: '#000',
+      primary: '#0cf',
+    },
+  },
+}
+
 const theme = {
+  useCustomProperties: false,
   ...swiss,
   ...typography,
+  colors,
   webTitle: {
     ...typography.h1,
     fontSize: '1.98818rem',

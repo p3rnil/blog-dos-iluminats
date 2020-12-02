@@ -4,6 +4,7 @@ import { jsx } from 'theme-ui'
 import Head from 'next/head'
 import Post from '../src/components/Post'
 import Author from '../src/components/Author'
+import ToggleModeTheme from '../src/components/ToggleModeTheme'
 
 const Index = ({ posts }) => {
   return (
@@ -29,7 +30,11 @@ const Index = ({ posts }) => {
         sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}
       >
         <header
-          sx={{ width: '100%', display: 'flex', justifyContent: 'flex-start' }}
+          sx={{
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'flex-start',
+          }}
         >
           <h1 sx={{ variant: 'typography.h1' }}>
             <a sx={{ color: 'inherit', textDecoration: 'none' }} href="/">
@@ -41,6 +46,7 @@ const Index = ({ posts }) => {
           <Author style={{ marginBottom: ['3rem', 0, null, null] }} />
           <Author />
         </aside>
+        <ToggleModeTheme />
         <main sx={{ width: '100%', flex: '1 0 auto' }}>
           {posts.map((post) => (
             <Post key={post.id} data={post} />
