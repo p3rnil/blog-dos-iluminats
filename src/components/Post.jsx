@@ -10,11 +10,11 @@ const Post = ({ data }) => {
           <a href="/">{data.title}</a>
         </h3>
         <div>
-          <img src={data.img} />
+          <img src={data.coverImage.url} />
         </div>
-        <small>{data.small}</small>
+        <small>{`${data.date} • ☕️ ${data.small}`}</small>
       </header>
-      <p>{data.text}</p>
+      <p>{data.subTitle}</p>
     </article>
   )
 }

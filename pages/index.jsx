@@ -5,6 +5,8 @@ import Head from 'next/head'
 import Post from '../src/components/Post'
 import Author from '../src/components/Author'
 import ToggleModeTheme from '../src/components/ToggleModeTheme'
+import client from '../src/config/apolloClient'
+import { gql } from '@apollo/client'
 
 const Index = ({ posts }) => {
   return (
@@ -83,25 +85,32 @@ const Index = ({ posts }) => {
   )
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ preview = false }) {
+  const { data } = await client.query({
+    query: gql`
+      query MyQuery {
+        posts {
+          id
+          date
+          small
+          subTitle
+          coverImage {
+            url
+          }
+          title
+          stage
+          content {
+            html
+          }
+        }
+      }
+    `,
+  })
+
   return {
     props: {
-      posts: [
-        {
-          id: '1',
-          title: 'Lorem Ipsum 1',
-          small: 'July 13, 2020 • ☕️ 1 min read',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          img: 'https://media.graphcms.com/kLIQMfNiSO64b8ZH1Jts',
-        },
-        {
-          id: '2',
-          title: 'Lorem Ipsum 2',
-          small: 'July 13, 2020 • ☕️ 1 min read',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          img: 'https://media.graphcms.com/kLIQMfNiSO64b8ZH1Jts',
-        },
-      ],
+      posts: data.posts,
+      preview,
     },
   }
 }
